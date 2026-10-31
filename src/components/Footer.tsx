@@ -55,6 +55,22 @@ export function Footer() {
           your local emergency services or Tele-MANAS at 14416 (India).
         </p>
       </div>
+      <div className="bg-forest text-white/70">
+        <p className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-2 px-5 py-4 text-xs">
+          <span>Designed &amp; developed by</span>
+          <a
+            href="https://github.com/Aavishkaar-Labs"
+            target="_blank"
+            rel="noopener"
+            className="inline-flex items-center gap-1.5 font-semibold text-white transition-colors hover:text-sage-light"
+          >
+            <svg aria-hidden viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-current">
+              <path d="M12 2 3 20h4.2l1.5-3.2h6.6l1.5 3.2H21L12 2Zm-1.9 11.8L12 9.6l1.9 4.2h-3.8Z" />
+            </svg>
+            Aavishkaar Labs
+          </a>
+        </p>
+      </div>
     </footer>
   );
 }
