@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ivory: #f4f1ea;
+  --color-paper: #fbfaf6;
+  --color-sage: #5e8a47;
+  --color-sage-dark: #4a7238;
+  --color-sage-light: #c9d7bd;
+  --color-sage-mist: #e6ece0;
+  --color-forest: #1f2c1d;
+  --color-forest-soft: #2c3b29;
+  --color-charcoal: #2b2b28;
+  --color-muted: #5d5d56;
+  --font-serif: var(--font-libre-baskerville), Georgia, serif;
+  --font-sans: var(--font-montserrat), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-sage-light);
+}
+
+/* Subtle leaf texture for the dark "services" band, drawn in CSS so no extra image request. */
+.leaf-texture {
+  background-color: var(--color-forest);
+  background-image:
+    radial-gradient(ellipse 60% 40% at 15% 20%, rgba(94, 138, 71, 0.28), transparent 70%),
+    radial-gradient(ellipse 50% 45% at 85% 70%, rgba(94, 138, 71, 0.22), transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.06' stroke-width='1.2'%3E%3Cpath d='M20 140 C40 80 90 40 150 20 C120 70 80 110 20 140Z'/%3E%3Cpath d='M20 140 L150 20'/%3E%3Cpath d='M55 108 L60 80 M85 82 L95 55 M115 55 L128 34 M55 108 L82 105 M85 82 L112 80 M115 55 L138 52'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: auto, auto, 160px 160px;
+}
+
+.hills {
+  background:
+    radial-gradient(120% 90% at 30% 120%, #3f5e2f 40%, transparent 41%),
+    radial-gradient(120% 80% at 80% 130%, #34502a 45%, transparent 46%),
+    linear-gradient(180deg, #9db58a 0%, #6f8f58 55%, #3f5e2f 100%);
+}
