@@ -13,7 +13,9 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://cafemetanoia.com",
   // TODO: replace with real contact details.
   email: "hello@cafemetanoia.com",
-  phone: "",
+  phone: "+91 81309 36991",
+  // WhatsApp number in international format, digits only (used for wa.me links).
+  whatsapp: "918130936991",
   location: "India · Online & in person",
   locale: "en_IN",
   keywords: [

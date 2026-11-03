@@ -39,19 +39,18 @@ export default function ContactPage() {
             <div className="absolute inset-x-4 bottom-4 rounded-xl bg-paper/95 p-5 text-sm shadow backdrop-blur">
               <dl className="space-y-3">
                 <div>
-                  <dt className="font-semibold text-sage-dark">Email</dt>
+                  <dt className="font-semibold text-sage-dark">WhatsApp</dt>
                   <dd>
-                    <a href={`mailto:${site.email}`} className="hover:underline">{site.email}</a>
+                    <a
+                      href={`https://wa.me/${site.whatsapp}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {site.phone}
+                    </a>
                   </dd>
                 </div>
-                {site.phone && (
-                  <div>
-                    <dt className="font-semibold text-sage-dark">Phone</dt>
-                    <dd>
-                      <a href={`tel:${site.phone}`} className="hover:underline">{site.phone}</a>
-                    </dd>
-                  </div>
-                )}
                 <div>
                   <dt className="font-semibold text-sage-dark">Sessions</dt>
                   <dd>{site.location}</dd>
@@ -60,7 +59,7 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="p-8 sm:p-12">
-            <ContactForm email={site.email} />
+            <ContactForm whatsapp={site.whatsapp} />
           </div>
         </div>
 
